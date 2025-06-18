@@ -1,0 +1,389 @@
+body{
+    background-color: white;
+}
+
+/*Transition starts here*/
+
+.container-transition{
+    width:100px;
+    height:200px;
+    color:white;
+    background-color: darkred;
+    transition: width 6s;       /*This line indicates that the transition 
+                                will begin when width changes*/
+}
+
+.container-transition:hover{
+    width: 700px;               /*Another line needs to be included so that
+                                  width does in fact change when the cursor hovers*/
+
+    background-color: rgb(86, 7, 86);
+}
+
+/* Animation starts here*/
+
+@keyframes firstAnimation {
+    from {background-color: steelblue; left:0px;}
+    to {background-color: yellow; left:200px;}
+}
+
+.container-animation{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color:steelblue;
+    animation: firstAnimation 5s infinite;
+    
+}
+
+
+/*Exercise #72*/
+.container-stars{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 362px;
+    height: 70px;
+    background: url(black-stars.jpg) 0px 70px;
+}
+
+.yellow-stars{
+    visibility: hidden;
+    width: 362px;
+    height: 70px;
+    transition: visibility;
+}
+
+
+
+.container-stars:hover .yellow-stars{
+    visibility: visible;
+}
+
+.star1{
+    height: 70px;
+    width:366px;
+    left:4px;
+    position: absolute;
+    /*background-color: red;*/
+    background: url(yellow-stars.jpg) 0 3px;
+    opacity: 0;
+    transition: opacity;
+}
+
+.star1:hover,
+.star1:focus{
+    opacity: 1;
+}
+
+.star2{
+    height: 70px;
+    width:295px;
+    left: 4px;
+    position: absolute;
+    /*background-color: blue;*/
+    background: url(yellow-stars.jpg) 0 3px;
+    opacity: 0;
+    transition: opacity;
+}
+
+.star2:hover,
+.star2:focus{
+    opacity: 1;
+}
+
+.star3{
+    height: 70px;
+    width:222px;
+    left:4px;
+    position: absolute;
+    /*background-color: yellow;*/
+    background: url(yellow-stars.jpg) 0 3px;
+    opacity: 0;
+    transition: opacity;
+}
+
+.star3:hover,
+.star3:focus{
+    opacity:1
+}
+
+.star4{
+    height: 70px;
+    width:148px;
+    left:4px;
+    position: absolute;
+    /*background-color: green;*/
+    background: url(yellow-stars.jpg) 0 3px;
+    opacity: 0;
+    transition: opacity;
+}
+
+.star4:hover,
+.star4:focus{
+    opacity:1
+}
+
+.star5{
+    height: 70px;
+    width:75px;
+    left:4px;
+    position: absolute;
+    /*background-color: purple;*/
+    background: url(yellow-stars.jpg) 1px 3px;
+    opacity: 0;
+    transition: opacity;
+}
+
+.star5:hover,
+.star5:focus{
+    opacity:1;
+}
+
+/*Exercise #73*/
+
+#carousel{
+    --wide: 500px;
+    left: calc(50% - var(--wide)/2);
+    position: relative;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+}
+
+#carousel li {             /*This line affects every child of carouse that is also li*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: carousel 6s infinite;
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  font-size: 2em;      
+}
+
+#carousel li:nth-child(1) { 
+    animation-delay: 0s;
+    background-color: red; }
+#carousel li:nth-child(2) { 
+    animation-delay: 2s;
+    background-color: blue; }
+#carousel li:nth-child(3) { 
+    animation-delay: 4s;
+    background-color: yellow; }
+
+@keyframes carousel {
+  0%   { opacity: 1;}
+  66%  { opacity: 0;}
+  100% { opacity: 0;}
+}
+
+/*Exercise #74*/
+.container-74{
+    display: flex;
+    flex-flow: row wrap;
+    height: 600px;
+    justify-content:stretch;
+    background-color: white;
+    border: 10px solid lightgray;
+    border-top: 30px solid lightgray;
+    align-items: stretch;    
+}
+
+.item-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.item-content1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    flex-basis: 43%;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.item-content2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 43%;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.item-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 13%;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.item-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    background-color: white;
+    border: 3px solid black;
+}
+
+/* Exercise 75 rules start here */
+
+.container-75{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.popup-letter{
+    /*margin:1%;*/
+    font-size: 3rem;
+    color: red;
+}
+
+.popup-letter:hover{
+    font-size: 8rem;
+}
+
+/*Exercise #77: Display menu */
+
+input[type="radio"]{
+    display: none;
+}
+
+#menu{
+    background-color: black;
+    color: white;
+    margin: 10%;
+}
+
+#menu .menu-button{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    position: fixed;
+    overflow: hidden;
+    left: 0px;
+    top: 15%;
+    width: 3em;
+    height: 2em;
+    transition: width 2s;
+}
+
+#menu .menu-button:hover{
+    width: max-content;
+    height: max-content;
+}
+
+#menu .option{
+    cursor: pointer;
+}
+
+#menu .menu-content{
+    display: none;
+}
+
+#menu .option:focus .menu-content{
+    /*display: block;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#menu .position-right:focus .menu-button{
+    /*display: flex;*/
+    background-color: yellow;
+    right: 0px;
+}
+
+#top:checked ~ .menu-button{
+      top: 0;
+      left: 50%;
+    }
+
+#right:checked ~ .menu-button{
+      top:   15%;
+      left: calc(100% - 160px);
+    }
+
+/*Exercise 79: album grid*/
+
+.grid-79{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  --albumheight:1fr;
+  gap: 10px;
+}
+
+.album-79{
+  background: lightgray;
+  aspect-ratio: 2 / 1;
+  padding: 20px;
+  text-align: center;
+}
+
+/*Exercise #80*/
+
+.container-80{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 50px;
+}
+
+.a-80{
+    display: flex;
+    background-color: red;
+    flex-basis: 33%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 250px;
+}
+
+.b-80{
+    display: flex;
+    background-color: blue;
+    flex-basis: 33%;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-80{
+    display: flex;
+    background-color: yellow;
+    flex-basis: 33%;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Exercise #81*/
+.container-81{
+    display:flex;
+    flex-flow: row;
+    height: 400px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.item-81{
+    display: flex;
+    min-height: 400px;
+    width: 50%;
+    padding: 10px;
+    border: 5px solid gold;
+    background-color: aquamarine;
+    box-sizing: border-box;
+}

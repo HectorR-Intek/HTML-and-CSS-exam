@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Exercises</title>
+    <link rel="stylesheet" href="style_exam.css">
+</head>
+<body>
+    <h1>Exercises in HTML/CSS exam</h1>
+
+    <!--Transition-->
+    <h2>Transition</h2>
+    <div class="container-transition">
+        Transition starts once we hover the cursor over the box
+    </div>
+
+
+    <!--Exercise #72: succesful-->
+    <h2>Exercise #72: Star ranking system</h2>
+    <div class = "big-container">
+        <div class="container-stars">
+            
+            <div class="star1" tabindex="0"></div>
+            <div class="star2" tabindex="0"></div>
+            <div class="star3" tabindex="0"></div>
+            <div class="star4" tabindex="0"></div>
+            <div class="star5" tabindex="0"></div>
+            
+        </div>
+    </div>
+    <div></div>
+
+    <!--Exercise #73-->
+    <h2>Exercise #73: Image carousel</h2>
+    <div id='carousel'>
+        <ul>
+            <li>Slide1</li>
+            <li>Slide2</li>
+            <li>Slide3</li>
+        </ul>
+    </div>
+
+    <!--Exercise #74-->
+    <h2>Exercise #74: layout</h2>
+    <div class="container-74">
+        <div class="item-header">Header</div>
+        <div class="item-content1">Content 1</div>
+        <div class="item-content2">Content 2</div>
+        <div class="item-side">Side</div>
+        <div class="item-footer">Footer</div>
+    </div>
+
+    <!--Exercise #75-->
+    <h2>Exercise #75: Pop-up letters</h2>
+    <div class="container-75">
+        <div class="popup-letter">H</div>
+        <div class="popup-letter">O</div>
+        <div class="popup-letter">V</div>
+        <div class="popup-letter">E</div>
+        <div class="popup-letter">R</div>
+        <div class="popup-letter">I</div>
+        <div class="popup-letter">N</div>
+        <div class="popup-letter">G</div>
+    </div>
+
+    <h2>Exercise #76: Slider</h2>
+    <p>To create a slider using HTML I'd use an input tag specifying type="range". This
+        element already has attributes min and max, where I'd put 0 and 100, respectively.
+    </p>
+
+
+    <!--Exercise #77: Display Menu-->
+    <h2>Exercise #77: Dropdown menu</h2>
+    <p>It is displayed to the left in a black rectangle but its position can be changed.</p>
+    <div id="menu">
+        <input type="radio" name="position" id="left" checked>
+        <input type="radio" name="position" id="top">
+        <input type="radio" name="position" id="right">
+        <div class="menu-button">
+            
+            Menu
+            <nav>
+                <ul>
+                    <li class="option" tabindex="0">
+                        Food <div class="menu-content" >
+                                <ul>
+                                    <li>food 1</li>
+                                    <li>food 2</li>
+                                    <li>food 3</li>
+                                </ul>
+                            </div>
+                    </li>
+                    <li class="option" tabindex="0">
+                        Drinks <div class="menu-content">
+                                    <ul>
+                                        <li>drink 1</li>
+                                        <li>drink 2</li>
+                                        <li>drink 3</li>
+                                    </ul>
+                               </div>
+                    </li>
+                    <li class="option" tabindex="0">
+                        Kids Menu <div class="menu-content">
+                                    <ul>
+                                        <li>kids 1</li>
+                                        <li>kids 2</li>
+                                        <li>kids 3</li>
+                                    </ul>
+                                  </div>
+                    </li>
+                </ul>
+                <div></div>
+                <ul>
+                    <li class="option" tabindex="0">
+                        Position
+                        <div class="menu-content">
+                            <label for="left">Left</label>
+                            <label for="right">Right</label>
+                            <label for="top">Top</label>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!--Exercise 78: Animation-->
+    <h2>Exercise #78: Animation</h2>
+    <div class="container-animation">
+        This animation works regardless of me hovering over it or not.
+    </div>
+
+
+    <!--Exercise 79: Album grid-->
+    <h2>Exercise #79: Album grid</h2>
+    <div class="grid-79">
+        <div class="album-79">1</div>
+        <div class="album-79">2</div>
+        <div class="album-79">3</div>
+        <div class="album-79">4</div>
+        <div class="album-79">5</div>
+        <div class="album-79">6</div>
+        <div class="album-79">7</div>
+        <div class="album-79">8</div>
+
+        <div class="album-79">9</div>
+        <div class="album-79">10</div>
+        <div class="album-79">11</div>
+        <div class="album-79">12</div>
+        <div class="album-79">13</div>
+        <div class="album-79">14</div>
+        <div class="album-79">15</div>
+        <div class="album-79">16</div>
+        <div class="album-79">I added a 17th album to make sure it breaks into four columns</div>
+    </div>
+
+
+    <!--Exercise #80: 3 divs-->
+    <h2>Exercise #80: 3 divs with centered text</h2>
+    <div class="container-80">
+        <div class="a-80">This is a paragraph</div>
+        <div class="b-80">So this is</div>
+        <div class="c-80">This one is too</div>
+    </div>
+
+    <!--Exercise 81: No overflow-->
+    <h2>Exercise #81: No overflow</h2>
+    <div class="container-81">
+        <div class="item-81">This item's width is 50% and it has additional padding and a border...</div>
+        <div class="item-81">yet no overflow is generated thanks to box-sizing:border-box</div>
+    </div>
+    
+    <!--Exercise 82: URL with blankpage-->
+    <h2>Exercise #82: URL with blankpage</h2>
+    <p>If given an URL that displays exclusively a blank page when written in a browser
+        I'd start by looking at the page-source and work from there.
+    </p>
+
+</body>
+</html>
