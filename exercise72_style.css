@@ -1,0 +1,90 @@
+body{
+    background-color: white;
+}
+
+.container-stars{
+    position: relative;
+    left: calc(50% - 362px/2);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 362px;                   /*The height and width correspond to the size of the image*/
+    height: 70px;
+    background: url(black-stars.jpg) 0px 70px;
+}
+
+.star5{
+    height: 70px;
+    width:100%;
+    left:calc(50% - 362px/2);                               /*This was 4px, in case it no longer works and I need to go back.*/
+    position: absolute;
+    /*background-color: red;*/
+    background: url(yellow-stars.jpg) 0 3px;
+    opacity: 0;
+    transition: opacity;
+}
+
+.star5:hover,
+.star5:focus{
+    opacity: 1;
+}
+
+.star4{
+    height: 70px;
+    width: 80%;
+    left: calc(50% - 362px/2);                              
+    position: absolute;
+    background: url(yellow-stars.jpg) 0 3px;
+    opacity: 0;
+    transition: opacity;
+}
+
+.star4:hover,
+.star4:focus{
+    opacity: 1;
+}
+
+.star3{
+    height: 70px;
+    width: 60%;
+    left: calc(50% - 362px/2);                              
+    position: absolute;
+    background: url(yellow-stars.jpg) 0 3px;
+    opacity: 0;
+    transition: opacity;
+}
+
+.star3:hover,
+.star3:focus{
+    opacity: 1;
+}
+
+.star2{
+    height: 70px;
+    width: 40%;
+    left: calc(50% - 362px/2);                              
+    position: absolute;
+    background: url(yellow-stars.jpg) 0 3px;
+    opacity: 0;
+    transition: opacity;
+}
+
+.star2:hover,
+.star2:focus{
+    opacity: 1;
+}
+
+.star1{
+    height: 70px;
+    width: 20%;
+    left: calc(50% - 362px/2);                              
+    position: absolute;
+    background: url(yellow-stars.jpg) 0 3px;
+    opacity: 0;
+    transition: opacity;
+}
+
+.star1:hover,
+.star1:focus{
+    opacity: 1;
+}
