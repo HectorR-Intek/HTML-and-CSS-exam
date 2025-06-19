@@ -1,0 +1,23 @@
+body{
+    background-color: white;
+}
+
+.container-75{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height:10rem;
+}
+
+.popup-letter{
+    display: flex;
+    width: 6rem;
+    height: 7rem;
+    font-size: 3rem;
+    color: blue;
+}
+
+.popup-letter:hover{
+    font-size: 8rem;
+}
