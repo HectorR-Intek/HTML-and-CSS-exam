@@ -1,0 +1,36 @@
+body{
+    background-color: white;
+}
+
+
+.grid-79{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  --albumheight:1fr;
+  gap: 1rem;
+}
+
+.album-79{
+  background: lightgray;
+  aspect-ratio: 2 / 1;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .grid-79 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-79 {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-79 {
+    grid-template-columns: 1fr;
+  }
+}
