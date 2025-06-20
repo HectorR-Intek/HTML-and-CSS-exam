@@ -1,0 +1,60 @@
+body{
+    background-color: white;
+}
+
+input[type="radio"]{
+    display: none;
+    
+}
+
+label{
+    cursor:pointer;
+}
+
+.dropdown {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+  border-radius: 5%;
+  position: fixed;
+  top:0;
+  right:50%;
+  width:max-content;
+  display: inline-block;
+  background-color: rgb(50, 50, 207);
+  color: white
+}
+
+.dropdown-content{
+    display: none;
+    border-radius: 5%;
+    background-color: rgb(19, 142, 208);
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+#left:checked ~ .dropdown{
+    left:0;
+    top: 100px;
+}
+
+#right:checked ~ .dropdown{
+    right:0;
+    top: 100px;
+}
+
+.option {
+    cursor: pointer;
+}
+
+.nested{
+    display:none;
+    background-color: red;
+    padding: 2px;
+}
+
+.option:focus > .nested{
+    background-color: rgb(13, 186, 233);
+    display:block;
+}
