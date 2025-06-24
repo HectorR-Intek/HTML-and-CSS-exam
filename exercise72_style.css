@@ -2,6 +2,8 @@ body{
     background-color: white;
 }
 
+
+
 .container-stars{
     position: relative;
     left: calc(50% - 362px/2);
@@ -24,10 +26,11 @@ body{
     transition: opacity;
 }
 
-.star5:hover,
-.star5:focus{
+
+.star5:hover{
     opacity: 1;
 }
+
 
 .star4{
     height: 70px;
@@ -86,5 +89,11 @@ body{
 
 .star1:hover,
 .star1:focus{
+    opacity: 1;
+}
+
+
+
+input:checked + label {
     opacity: 1;
 }
