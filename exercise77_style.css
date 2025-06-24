@@ -19,7 +19,21 @@ label{
   top:0;
   right:50%;
   width:max-content;
-  display: inline-block;
+  display: inline-block;  
+  background-color: rgb(50, 50, 207);
+  color: white
+}
+
+.dropdown-horizontal{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+  border-radius: 5%;
+  position: fixed;
+  top:0;
+  right:50%;
+  width:max-content;
+  height: max-content;
+  display: none;  
   background-color: rgb(50, 50, 207);
   color: white
 }
@@ -28,10 +42,27 @@ label{
     display: none;
     border-radius: 5%;
     background-color: rgb(19, 142, 208);
+    width: max-content;
+    height: max-content;
 }
 
 .dropdown:hover .dropdown-content{
-    display:block;
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.dropdown-horizontal:hover .dropdown-content{
+    display:flex; 
+    flex-direction: row;
+    right: 100%;
+    justify-content: space-between;
+    gap: 0.5em;
+    box-sizing: border-box;
+    width:auto;
+    height: max-content;
+    padding-right: 2%;
+    padding-left: 3%;
 }
 
 #left:checked ~ .dropdown{
@@ -39,22 +70,35 @@ label{
     top: 100px;
 }
 
+
 #right:checked ~ .dropdown{
     right:0;
     top: 100px;
 }
 
+#top:checked ~ .dropdown{
+    display: none;
+}
+
+#top:checked ~ .dropdown-horizontal{
+    display: flex;
+    justify-content: space-between;
+}
+
 .option {
     cursor: pointer;
+    /*box-sizing: border-box;*/
+    width: max-content;
+    height: max-content;
 }
 
 .nested{
     display:none;
-    background-color: red;
     padding: 2px;
 }
 
 .option:focus > .nested{
+    display: flex;
+    /*box-sizing: border-box;*/
     background-color: rgb(13, 186, 233);
-    display:block;
 }
