@@ -1,0 +1,102 @@
+body{
+    background-color: beige;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+label{
+    cursor: pointer;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropbtn{
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+}
+
+.dropdown-horizontal{
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    min-width: 160px;
+    background-color: rgba(240, 255, 255, 0.715);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dropdown-content div:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+.nested{
+    display: none;
+}
+
+.option:focus > .nested{
+    display: flex;
+}
+
+.nested:hover{
+    background-color: #ddd;
+}
+
+#right:checked ~ .dropdown{
+    float: right;
+}
+
+#right:checked ~ .dropdown .dropdown-content {
+  right: 0;
+}
+
+#left:checked ~ .dropdown{
+    float: left;
+}
+
+#left:checked ~ .dropdown .dropdown-content {
+  left: 0;
+}
+
+#top:checked ~ .dropdown{
+  position: fixed;          /*This was position:fixed*/
+  top:0;
+  right:50%;
+}
+
+#top:checked ~ .dropdown:hover .dropdown-content{
+    display: none;
+}
+
+#top:checked ~ .dropdown:hover + .dropdown-horizontal{
+    position: absolute;
+    display: flex;
+    top:0;
+    left:50%;
+    background-color: rgba(240, 255, 255, 0.715);
+}
+
+#top:checked ~ .dropdown-horizontal:hover{
+    position: absolute;
+    display: flex;
+    gap: 0.5em;
+    top:0;
+    left:50%;
+    background-color: rgba(240, 255, 255, 0.715);
+}
+
+.dropdown-horizontal div:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
